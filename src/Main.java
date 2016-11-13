@@ -17,10 +17,10 @@ public class Main {
         }
         while (!exitCheck) {
             System.out.println("Press 1 to get money, 2  to put money, 3 to check an account state, 9 to exit.");
-            String command = scanner.nextLine();
-            if (command.equals("9")) exitCheck = true;
-            if (command.equals("3")) System.out.println("Account state: " + terminal.checkAccountState());
-            if (command.equals("1")) {
+            int command = scanner.nextInt();
+            if (command == 9) exitCheck = true;
+            if (command == 3) System.out.println("Account state: " + terminal.checkAccountState());
+            if (command == 1) {
                 System.out.println("Enter an amount of money.");
                 int money = scanner.nextInt();
                 try {
@@ -29,7 +29,7 @@ public class Main {
                     System.out.println(e.getMessage());
                 }
             }
-            if (command.equals("2")) {
+            if (command == 2) {
                 System.out.println("Enter an amount of money.");
                 int money = scanner.nextInt();
                 try {
